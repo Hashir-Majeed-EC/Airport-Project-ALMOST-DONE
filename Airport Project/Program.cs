@@ -146,7 +146,7 @@ namespace Airport_Project
             int flightCostPerSeat = Convert.ToInt32(flight[1]) * distStored / 100;
             int flightCost = flightCostPerSeat * numOfPassengers;
             int flightIncome = (Convert.ToInt32(flight[flight.Length - 2]) * firstClassCost) + ((Convert.ToInt32(flight[flight.Length - 1]) - Convert.ToInt32(flight[flight.Length - 2])) * standardCost);
-            return flightIncome - flightCost;
+            return (flightIncome - flightCost)/2;
         }
 
         static string[] readFile(string filename)
